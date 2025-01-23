@@ -1,8 +1,10 @@
-from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+
 import nltk
 from nltk.corpus import stopwords
 import re
 
+nltk.downloader.download('vader_lexicon')
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 # initialize vader sentiment
 analyzer = SentimentIntensityAnalyzer()
 
