@@ -123,3 +123,4 @@ if st.session_state["positive_count"] > 0 or st.session_state["negative_count"] 
         st.markdown('</div>', unsafe_allow_html=True)
         st.markdown('<div class="box column-box">', unsafe_allow_html=True)
         st.markdown('</div>', unsafe_allow_html=True)
+

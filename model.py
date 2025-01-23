@@ -38,5 +38,6 @@ def find_sentiment(user_message):
         sentiment_type = "Negative"
     else:
         sentiment_type = "Neutral"
+        
 
     return sentiment_type, compound_score
