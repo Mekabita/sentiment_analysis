@@ -15,7 +15,7 @@ analyzer = SentimentIntensityAnalyzer()
 def preprocess_text(text):
     # do the preprocessing steps like removing emails, whitespace, numbers and stopwords
     text = text.lower()
-    # remove email
+    # remove emailad
     text = re.sub(r"http\S+|www\S+|@\S+|mailto:\S+", "", text)
     # remove punctuation
     text = re.sub(r"[^\w\s]", "", text)

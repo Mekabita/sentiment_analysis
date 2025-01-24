@@ -30,11 +30,10 @@ if "neutral_count" not in st.session_state:
 # User Input 
 user_message = st.text_input("Type your message below:")
 
-# Placeholder for sentiment type and score
+
 if user_message:
-    # Simulate sentiment analysis (replace with real backend in future)
+
     sentiment_type, sentiment_score  = find_sentiment(user_message)
-    # sentiment_score = 0.85 if sentiment_type == "Positive" else 0.2
 
     # Update counts based on sentiment type
     if sentiment_type == "Positive":
@@ -48,7 +47,7 @@ if user_message:
     col1, col2 = st.columns(2)
 
     with col1:
-        # Display Results inside a box
+        # Display Results with border
         st.markdown('<div class="box column-box">', unsafe_allow_html=True)
         st.subheader("Sentiment Analysis Result")
         st.write(f"**Sentiment Type:** {sentiment_type}")
@@ -56,7 +55,7 @@ if user_message:
         st.markdown('</div>', unsafe_allow_html=True)
 
     with col2:
-        # Sentiment Analysis Summary inside a box
+        # Sentiment Analysis Summary
         st.markdown('<div class="box column-box">', unsafe_allow_html=True)
         st.subheader("Sentiment Analysis Summary")
         st.write(f"**Positive Messages Count:** {st.session_state['positive_count']}")
@@ -103,7 +102,7 @@ if st.session_state["positive_count"] > 0 or st.session_state["negative_count"] 
         height=400
     )
 
-    # Layout: Side-by-Side Charts in boxes
+    # Layout: Side-by-Side Charts with border
     chart_col1, chart_col2 = st.columns(2)
 
     with chart_col1:
